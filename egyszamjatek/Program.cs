@@ -16,6 +16,9 @@ namespace egyszamjatek
 
             Feladat_4();
 
+            Feladat_5();
+
+
         }
 
         private static void Feladat_2()
@@ -41,6 +44,24 @@ namespace egyszamjatek
         private static void Feladat_4()
         {
             Console.WriteLine($"4. feladat: Játékosok száma: {jatekosok[0].Tippek.Count}");
+        }
+
+        private static void Feladat_5()
+        {
+            int i = 0;
+
+            while ( i < jatekosok.Count && jatekosok[i].Tippek[0] != 1)
+            {
+                i++;
+            }
+            if (i < jatekosok.Count)
+            {
+                Console.WriteLine($"5. feladat: Az első fordulóban volt egyes tipp");
+            }
+            else
+            {
+                Console.WriteLine($"5. feladat: Az első fordulóban nem volt egyes tipp");
+            }
         }
     }
 }
